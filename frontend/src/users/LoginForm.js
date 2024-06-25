@@ -29,12 +29,13 @@ function LoginForm() {
 
         if (response.status === 200) {
             setCurrentUser(data.user)
+            console.log(data.token)
             history.push(`/`)
         } else {
             setErrorMessage(data.message)
         }
     }
-
+     
     return (
         <main>
             <h1>Login</h1>
